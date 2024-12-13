@@ -2,12 +2,13 @@ from dotenv import load_dotenv
 import os
 import requests
 import datetime
-from config import tg_bot_token, open_weather_token
 from aiogram import Bot, Router, types, Dispatcher, F
 from aiogram.types import Message
 import asyncio
 
+# Загрузка переменных окружения из .env
 load_dotenv()
+
 tg_bot_token = os.getenv("TG_BOT_TOKEN")
 open_weather_token = os.getenv("OPEN_WEATHER_TOKEN")
 
