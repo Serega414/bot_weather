@@ -66,7 +66,7 @@ async def get_weather(message: Message):
         await message.answer(f"***{datetime.datetime.now().strftime('%H:%M %d-%m-%Y')}***\n"
                              f"Погода тута: {city}\nТемпература: {
             cur_weather}C° {wd}\n"
-            f"Важность: {humidity}%\nГубатый: {wind}м/с\n"
+            f"Важность: {humidity}%\nВетер: {wind}м/с\n"
             # f"Восход лампы: {sunrise_timestamp}\n"
             # f"Заход лампы: {sunset_timestamp}\n"
             f"Продолжительность дня: {length_of_the_day}\n"
