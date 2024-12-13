@@ -10,6 +10,12 @@ import asyncio
 load_dotenv()
 tg_bot_token = os.getenv("TG_BOT_TOKEN")
 open_weather_token = os.getenv("OPEN_WEATHER_TOKEN")
+
+if not tg_bot_token:
+    raise ValueError("TG_BOT_TOKEN is not set or invalid!")
+if not open_weather_token:
+    raise ValueError("OPEN_WEATHER_TOKEN is not set or invalid!")
+
 # Создание бота и диспетчера
 bot = Bot(token=tg_bot_token)
 router = Router()
